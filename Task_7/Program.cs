@@ -3,7 +3,7 @@
 Console.Clear();
 
 Console.Write("Введите номер дня недели: ");
-int day = int.Parse(Console.ReadLine());
+int day = int.Parse(Console.ReadLine()!);
 
 if (day > 5 && day < 8) Console.WriteLine("Да, это выходной день");
 else if (day > 0 && day < 6) Console.WriteLine("Нет, это будний день");

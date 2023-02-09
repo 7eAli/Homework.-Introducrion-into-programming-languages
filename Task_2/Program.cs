@@ -3,11 +3,11 @@
 Console.Clear();
 
 Console.Write("Введите число: ");
-int a = int.Parse(Console.ReadLine());
+int a = int.Parse(Console.ReadLine()!);
 Console.Write("Введите число: ");
-int b = int.Parse(Console.ReadLine());
+int b = int.Parse(Console.ReadLine()!);
 Console.Write("Введите число: ");
-int c = int.Parse(Console.ReadLine());
+int c = int.Parse(Console.ReadLine()!);
 
 int max = a;
 
