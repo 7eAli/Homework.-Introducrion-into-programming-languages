@@ -27,5 +27,4 @@ Console.Clear();
 int[] array = GetArray(10, 100, 999);
 Console.WriteLine(string.Join(", ", array));
 
-int evenFromArray = CheckEven(array);
-Console.WriteLine($"Количетсво четных чисел в массиве: {evenFromArray}");
+Console.WriteLine($"Количетсво четных чисел в массиве: {CheckEven(array)}");
