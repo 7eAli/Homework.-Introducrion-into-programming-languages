@@ -55,18 +55,24 @@ void FindMinRow(int[,] array)
     Console.WriteLine($"Строка с минимальной суммой элементов - № {minimalPosition + 1}");    
 }
 
+int[,] CreateArray()
+{
+    Console.Write("Введите количество строк: ");
+    int height = Convert.ToInt32(Console.ReadLine()!);
+    Console.Write("Введите количество столбцов: ");
+    int length = Convert.ToInt32(Console.ReadLine()!);
+    Console.Write("Введите минимальное значение: ");
+    int minValue = Convert.ToInt32(Console.ReadLine()!);
+    Console.Write("Введите максимальное значение: ");
+    int maxValue = Convert.ToInt32(Console.ReadLine()!);
+
+    int[,] result = GetArray(height, length, minValue, maxValue);
+    return result;
+}
+
 Console.Clear();
 
-Console.Write("Введите кол-во строк: ");
-int row = int.Parse(Console.ReadLine()!);
-Console.Write("Введите кол-во столбцов: ");
-int column = int.Parse(Console.ReadLine()!);
-Console.Write("Введите минимальное значение: ");
-int minValue = int.Parse(Console.ReadLine()!);
-Console.Write("Введите максимальное значение: ");
-int maxValue = int.Parse(Console.ReadLine()!);
-
-int[,] array = GetArray(row, column, minValue, maxValue);
+int[,] array = CreateArray();
 PrintArray(array);
 Console.WriteLine();
 FindMinRow(array);

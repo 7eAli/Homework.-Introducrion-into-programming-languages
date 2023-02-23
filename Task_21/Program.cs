@@ -26,15 +26,21 @@ void Print2DimArray(double[,] array)
     }
 }
 
-Console.Clear();
-Console.Write("Введите количество строк: ");
-int height = Convert.ToInt32(Console.ReadLine()!);
-Console.Write("Введите количество столбцов: ");
-int length = Convert.ToInt32(Console.ReadLine()!);
-Console.Write("Введите минимальное значение: ");
-double minValue = Convert.ToDouble(Console.ReadLine()!);
-Console.Write("Введите максимальное значение: ");
-double maxValue = Convert.ToDouble(Console.ReadLine()!);
+double[,] CreateArray()
+{
+    Console.Write("Введите количество строк: ");
+    int height = Convert.ToInt32(Console.ReadLine()!);
+    Console.Write("Введите количество столбцов: ");
+    int length = Convert.ToInt32(Console.ReadLine()!);
+    Console.Write("Введите минимальное значение: ");
+    double minValue = Convert.ToDouble(Console.ReadLine()!);
+    Console.Write("Введите максимальное значение: ");
+    double maxValue = Convert.ToDouble(Console.ReadLine()!);
 
-double[,] array = GetDouble2DimArray(height, length, minValue, maxValue);
+    double[,] result = GetDouble2DimArray(height, length, minValue, maxValue);
+    return result;
+}
+
+Console.Clear();
+double[,] array = CreateArray();
 Print2DimArray(array);
